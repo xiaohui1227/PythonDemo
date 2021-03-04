@@ -1,0 +1,18 @@
+syntax = "proto3";
+option go_package = "./proto";
+// option objc_class_prefix = "HLW";
+
+package testServer;
+
+service testServer {
+    // 测试 加一返回
+    rpc analy_data_add(DataAddReq) returns (DataAddRes);
+}
+
+message DataAddReq {
+    int32 base_data = 1;
+}
+
+message DataAddRes {
+    int32 analy_data = 1;
+}
